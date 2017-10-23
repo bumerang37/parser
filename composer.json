@@ -1,5 +1,5 @@
 {
-  "name" : "maksclub/parser",
+  "name" : "Maksclub/parser",
   "description" : "Module - parser video from Youtube, Vimeo and Rutube with CRUD",
   "type": "yii2-extension",
   "keywords": ["yii2", "yii 2", "parser video", "parser", "yii2 parser", "yii parser"],
