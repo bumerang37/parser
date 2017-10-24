@@ -28,6 +28,15 @@ class VideoManageService
         $match = $this->matcher->parse($form->url);
 
 
+        /*
+         * No description to youtube
+         */
+        if($match->getServiceName() == 'Youtube'){
+            $description = '';
+        }else{
+            $description = $match->getDescription();
+        }
+
 
         /*
          * Create video fields
@@ -36,8 +45,8 @@ class VideoManageService
             $form->title = $match->getTitle(),
             $form->service = $match->getServiceName(),
             $form->video_id = $match->videoId,
-            $form->body = '',
-            $form->embed_code = $match->getEmbedCode(200, 200),
+            $form->body = $description,
+            $form->embed_code = $match->getEmbedCode(400, 300),
             $form->url = $match->rawUrl,
             $form->large_thumbnail =$match->getLargeThumbnail()
         );

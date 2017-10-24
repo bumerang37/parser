@@ -4,7 +4,7 @@
 
 ### 1.Скачать модуль:
 ```php
-composer require maksclub/parser
+composer require maksclub/parser "dev-master"
 ```
 
 ### 2. Подключение модуля:
