@@ -3,7 +3,7 @@
 use yii\db\Migration;
 
 /**
- * Handles the creation of table `video`.
+ * Class m171021_124825_create_video_table
  */
 class m171021_124825_create_video_table extends Migration
 {

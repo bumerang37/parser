@@ -9,12 +9,13 @@ use yii\data\ActiveDataProvider;
 use maksclub\parser\entities\Video;
 
 /**
- * VideoSearch represents the model behind the search form of `maksclub\parser\models\Video`.
+ * Class VideoSearch
+ * @package maksclub\parser\search
  */
 class VideoSearch extends VideoForm
 {
     /**
-     * @inheritdoc
+     * @return array
      */
     public function rules()
     {
@@ -25,7 +26,7 @@ class VideoSearch extends VideoForm
     }
 
     /**
-     * @inheritdoc
+     * @return mixed
      */
     public function scenarios()
     {
@@ -34,10 +35,7 @@ class VideoSearch extends VideoForm
     }
 
     /**
-     * Creates data provider instance with search query applied
-     *
-     * @param array $params
-     *
+     * @param $params
      * @return ActiveDataProvider
      */
     public function search($params)

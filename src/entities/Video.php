@@ -19,6 +19,16 @@ use Yii;
 class Video extends \yii\db\ActiveRecord
 {
 
+    /**
+     * @param $title
+     * @param $service
+     * @param $video_id
+     * @param $body
+     * @param $embed_code
+     * @param $url
+     * @param $large_thumbnail
+     * @return Video
+     */
     public static function create($title, $service,  $video_id, $body, $embed_code, $url, $large_thumbnail): self
     {
         $video = new static();
@@ -33,16 +43,20 @@ class Video extends \yii\db\ActiveRecord
         return $video;
     }
 
+
+
     /**
-     * @inheritdoc
+     * @return string
      */
     public static function tableName()
     {
         return '{{%video}}';
     }
 
+
+
     /**
-     * @inheritdoc
+     * @return array
      */
     public function attributeLabels()
     {

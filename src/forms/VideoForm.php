@@ -15,6 +15,9 @@ use maksclub\parser\entities\Video;
 
 class VideoForm extends Video
 {
+    /**
+     * @return array
+     */
     public function rules()
     {
         return [

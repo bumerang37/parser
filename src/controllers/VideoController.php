@@ -18,8 +18,19 @@ use yii\filters\AccessControl;
 class VideoController extends Controller
 {
 
+    /**
+     * @var VideoManageService
+     */
     private $service;
 
+
+    /**
+     * VideoController constructor.
+     * @param $id
+     * @param $module
+     * @param VideoManageService $service
+     * @param array $config
+     */
     public function __construct($id, $module, VideoManageService $service, array $config = [])
     {
 
@@ -29,7 +40,7 @@ class VideoController extends Controller
 
 
     /**
-     * @inheritdoc
+     * @return array
      */
     public function behaviors()
     {
@@ -70,6 +81,10 @@ class VideoController extends Controller
         ]);
     }
 
+
+
+
+
     /**
      * Creates a new Video model.
      * If creation is successful, the browser will be redirected to the 'view' page.
@@ -95,6 +110,9 @@ class VideoController extends Controller
     }
 
 
+
+
+
     /**
      * Deletes an existing Video model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
@@ -107,6 +125,9 @@ class VideoController extends Controller
 
         return $this->redirect(['index']);
     }
+
+
+
 
     /**
      * Finds the Video model based on its primary key value.

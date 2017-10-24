@@ -10,15 +10,31 @@ use RicardoFiorani\Matcher\VideoServiceMatcher;
 
 class VideoManageService
 {
+    /**
+     * @var VideoRepository
+     */
     private $video;
+
+    /**
+     * @var VideoServiceMatcher
+     */
     private $matcher;
 
+    /**
+     * VideoManageService constructor.
+     * @param VideoRepository $video
+     * @param VideoServiceMatcher $matcher
+     */
     public function __construct(VideoRepository $video, VideoServiceMatcher $matcher)
     {
         $this->video = $video;
         $this->matcher = $matcher;
     }
 
+    /**
+     * @param VideoForm $form
+     * @return Video
+     */
     public function create(VideoForm $form): Video
     {
 

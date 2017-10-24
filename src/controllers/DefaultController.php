@@ -6,6 +6,10 @@ use maksclub\parser\search\VideoSearch;
 use yii\web\Controller;
 use Yii;
 
+/**
+ * Class DefaultController
+ * @package maksclub\parser\controllers
+ */
 class DefaultController extends Controller
 {
     /**

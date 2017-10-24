@@ -2,10 +2,14 @@
 
 Для работы нужен установленный Yii2
 
+
+
 ### 1.Скачать модуль:
 ```php
 composer require maksclub/parser "dev-master"
 ```
+
+
 
 ### 2. Подключение модуля:
 ```php
@@ -16,11 +20,16 @@ composer require maksclub/parser "dev-master"
 ],
 ```
 
+
+
 ###  3. Миграции:
 ```php
 php yii migrate/up --migrationPath=@vendor/maksclub/parser/src/migrations
 ```
 
+
+
+###  4. Настройка:
 Чтобы модуль отображался по умолчанию на главной:
 ```php
 'defaultRoute' => 'parser/default/index',
